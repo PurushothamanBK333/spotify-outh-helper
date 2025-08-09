@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Spotify Auth Code</h1>
+    <p>Copy this code and use it in your token request:</p>
+    <pre id="code" style="font-size:18px; font-weight:bold; background:#f4f4f4; padding:10px;"></pre>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code');
+      document.getElementById('code').innerText = code || "No code found";
+    </script>
+  </body>
+</html>
